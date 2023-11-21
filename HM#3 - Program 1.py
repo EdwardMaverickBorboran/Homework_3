@@ -16,6 +16,11 @@ def open():
     str_orange_price = str(Orange_Price)
     messagebox.showinfo(title= "Purchased", message="The total cost of the Oranges you purchased is Php " + str_orange_price)
 
+    #Total Cost
+    Total_Cost = Apple_Price + Orange_Price
+    str_total_cost = str(Total_Cost)
+    messagebox.showinfo(title= "Total Purchase", message="The total cost of your Purchase is Php " + str_total_cost)
+
     #Name of Buyer
     Name_Input = simpledialog.askstring("Name", "May we know who is our buyer is?")
     while all((valid.isalpha() or valid.isspace()) for valid in Name_Input) == False:
@@ -67,8 +72,13 @@ Name_Label.configure(bg= "#F6F4F2")
 
 #Button for Submission
 Submit_Button = Button(Ed_Frame, text=("Proceed"), command=open, font='Impact, 16', bd=3)
-Submit_Button.grid(row=2, columnspan=2, padx=10, pady=15, sticky="news")
+Submit_Button.grid(row=2, columnspan=2, padx=10, pady=5, sticky="news")
 Submit_Button.configure(bg= "#FFD02C")
+
+#Button to Cancel
+Cancel_Button = Button(Ed_Frame, text=("Exit"), command=exit, font='Impact, 16', bd=3)
+Cancel_Button.grid(row=3, columnspan=2, padx=10, pady=15, sticky="news")
+Cancel_Button.configure(bg= "#EE5C42")
 
 #Can't resize the root
 root.resizable(False, False)
