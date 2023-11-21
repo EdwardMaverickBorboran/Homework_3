@@ -5,10 +5,10 @@ from tkinter import Label, Button, messagebox, simpledialog
 def alohomora():
 
     #Entering your Current Balance
-    Money_Quantity = (simpledialog.askinteger("Money", "How much is your current balance right now?"))
+    Money_Quantity = (simpledialog.askinteger("Money", "How much is your current balance right now?", minvalue=0))
     
     #Asking for how much you will spend on an Apple
-    Apple_Quantity = (simpledialog.askinteger("Apples", "How much are you willing to spend on an Apple? It cost Php20 each as of now."))
+    Apple_Quantity = (simpledialog.askinteger("Apples", "How much are you willing to spend on an Apple? It cost Php20 each as of now.", minvalue=10))
 
     #Breakdown of Purchase
     Money_Left = Money_Quantity%Apple_Quantity
@@ -67,7 +67,7 @@ Introduction_Label.grid(row=0, column=0, columnspan=2, pady=10)
 Introduction_Label.configure(bg= "#F6F4F2")
 
 #Let's Start
-Start_Label = Label(Ed_Label_Frame, text="Buy Fresh Apples and Oranges", font="Heltivica, 18")
+Start_Label = Label(Ed_Label_Frame, text="APPLES! APPLES! APPLES!", font="Heltivica, 18")
 Start_Label.grid(row=1, column=0, columnspan=2, padx=10, pady=20)
 Start_Label.configure(bg= "#F6F4F2")
 
