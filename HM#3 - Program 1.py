@@ -7,16 +7,14 @@ def open():
     #Apple
     Apple_Quantity = (simpledialog.askinteger("Apples", "What is your desired amount of Apples? It cost Php 20 each"))
     Apple_Price = Apple_Quantity*20
+    str_apple_price = str(Apple_Price)
     messagebox.showinfo(title= "Purchased", message="The total cost of the Apples you purchased is Php " + str_apple_price)
 
     #Orange
     Orange_Quantity = (simpledialog.askinteger("Apples", "What is your desired amount of Oranges? It cost Php 25 each"))
     Orange_Price = Orange_Quantity*25
-    messagebox.showinfo(title= "Purchased", message="The total cost of the Oranges you purchased is Php " + str_orange_price)
-
-    #Strings for the messagebox
-    str_apple_price = str(Apple_Price)
     str_orange_price = str(Orange_Price)
+    messagebox.showinfo(title= "Purchased", message="The total cost of the Oranges you purchased is Php " + str_orange_price)
 
     #Name of Buyer
     Name_Input = simpledialog.askstring("Name", "May we know who is our buyer is?")
